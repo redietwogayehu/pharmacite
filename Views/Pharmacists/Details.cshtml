@@ -1,0 +1,42 @@
+﻿@model PharmaCite_Pharmacy_Managment_System.Models.Pharmacist
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pharmacist</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PharmacistName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PharmacistName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HiredDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HiredDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pwd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pwd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HiredByNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HiredByNavigation.ManagerName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PharmacistId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
